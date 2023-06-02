@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth's portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/font-awesome.min.css">
+     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<style>
+    .bg-color{
+        background-color: rgb(15, 25, 44);
+    }
+    .section .bg-color{
+        background-color: rgb(15, 25, 60);
+    }
+    .section-1 .btn-color-1{
+        background-color: rgba(3, 8, 37, 0.466); 
+    }
+    .section-2 .bg-color-2{
+        background-color: rgba(3, 8, 37, 0.466);  
+    }
+    
+    .section-3 .overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        border-radius: 4%;
+    }
+    .section-3 .content-1:hover .overlay {
+        opacity: 1;
+    }
+    .section-3 .overlay .text-1{
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        border: black 5px;
+    }
+    
+    .section-5 .bg-color-1{
+        background-color: rgb(15, 25, 44);  
+    }
+
+    
+
+    
+    
+    @media screen and (max-width: 576px) {
+        .section-1 img{
+            width: 100%;
+            
+        }
+        .section-2 .margin-1{
+            margin-left: 35%;
+        }
+        .section-2 .padding-1{
+            padding-bottom: 10%;
+        }
+        .section-2 .padding-2{
+            padding-bottom: 10%;
+        }
+        .section-2 .padding-3{
+            padding-bottom: 10%;
+        }
+        .section-5 .row .col-sm-6 textarea{
+            height: 100px;
+            width: 200px;
+        }
+        
+        
+    }
+    
+    @media screen and (min-width: 576px) {
+        .section-1 img{
+            /* height: 50%; */
+            padding-top: 0%;
+            
+        }
+        .section-2 .margin-1{
+            margin-left: 22%;
+        }
+        .section-2 .padding-1{
+            padding-bottom: 10%;
+        }
+        .section-2 .padding-2{
+            padding-bottom: 10%;
+        }
+        .section-2 .padding-3{
+            padding-bottom: 10%;
+        }
+        .section-4 .height-1{
+            height: 94.5%;
+        }
+        .section-5 .row .col-sm-6 textarea{
+            height: 100px;
+            width: 200px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .section-1 img{
+            /* height: 50%; */
+            padding-top: 0%;
+        }
+        .section-2 .margin-1{
+            margin-left: 22%;
+        }
+        .section-2 .padding-1{
+            padding-bottom: 18%;
+        }
+        .section-2 .padding-2{
+            padding-bottom: 15%;
+        }
+        .section-2 .padding-3{
+            padding-bottom: 1%;
+        }
+        .section-5 .row .col-sm-6 textarea{
+            height: 100px;
+            width: 61%;
+        }
+        
+
+    }
+    @media screen and (min-width: 992px) {
+        .section-1 img{
+            height: 100%;
+            padding-top: 0%;
+        }
+        .section-2 .padding-1{
+            padding-bottom: 18%;
+        }
+        .section-2 .padding-2{
+            padding-bottom: 18%;
+        }
+        .section-2 .padding-3{
+            padding-bottom: 6%;
+        }
+        .section-4 .height-1{
+            height: 93%;
+        }
+        .section-5 .row .col-sm-6 textarea{
+            height: 100px;
+            width: 412px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        .section-2 .padding-1{
+            padding-bottom: 18%;
+        }
+        .section-2 .padding-2{
+            padding-bottom: 18%;
+        }
+        .section-2 .padding-3{
+            padding-bottom: 7%;
+        }
+    }
+    @media screen and (min-width: 1400px) {
+        .section-2 .padding-1{
+            padding-bottom: 10%;
+        }
+        .section-2 .padding-2{
+            padding-bottom: 10%;
+        }
+        .section-2 .padding-3{
+            padding-bottom: 10%;
+        }
+    }
+</style>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top  bg-color ">
+        <div class="container-fluid ">
+          <a class="navbar-brand text-light" >Parth vataliya</a>
+          <button class="navbar-toggler  border border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon btn btn-light  btn-lg border border-0"></span>
+          </button>
+          <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-light " aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#achievements">Achievements</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#contact">Contact</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+    </nav>
+    
+    <div class="section">
+        <div class="bg-color ">
+            <div class="container">
+                <div class="row section-1" id="home">
+                    <div class="col-sm-6 mt-5 d-flex justify-content-center align-items-center mb-5 ">
+                        <img class="border border-0 rounded-pill" src="./assets/IMG_2760-removebg-preview.png" alt="">
+                    </div>
+                    <div class="col-sm-6 mt-5 mb-5 ">
+                        <div class="ms-5 ">
+                            <p class="text-secondary fw-bold fs-5">Hello I'm Parth!</p>
+                            <h1 class="fw-bold text-secondary">DevOps Engineer & <br> 
+                            Web Developer</h1>
+                            <p class="fw-bold text-secondary">Welcome to my portfolio! I am a versatile professional with a passion for both DevOps engineering and web development.I specialize in designing, implementing, and managing robust infrastructure and deployment pipelines. I have hands-on experience with various cloud platforms, such as AWS and possess a deep understanding of containerization technologies like Docker and orchestration tools like Kubernetes.</p>
+                            <button class="btn btn-color-1 p-2 ps-3 pe-3"><a href="./assets/parth vataliya 2.pdf" style="text-decoration: none;" class="text-info ">RESUME</a></button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="section-2 bg-color-2 border border-0 rounded-4" id="skills">
+                    <div class="bg-color-2">
+                        <div class="text-center text-light mt-5 pt-5">
+                            <h2 class="fw-bold text-opacity-75">Skills</h2>
+                        </div>
+                        <div class="row p-4">
+                            <div class="col-md-4 mt-3 ">
+                                <div class="bg-secondary bg-opacity-75 border border-0 rounded-4 pt-4 h-100">
+                                    <div class="d-flex justify-content-center">
+                                        <h3 class="text-opacity-75 text-light fw-bold">DevOps Skills</h3>
+                                    </div>
+                                    <div class="d-flex justify-content-center text-opacity-75 text-light">
+                                        <ul>
+                                            <li style="list-style: none;">
+                                                <p>&#10003; AWS</p>
+                                                <p>&#10003; CI/CD</p>
+                                                <p>&#10003; Containerization</p>
+                                                <p>&#10003; Coding & Shell Scripting </p>
+                                                <p>&#10003; Testing</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <div class="bg-secondary bg-opacity-75 border border-0 rounded-4 pt-4 h-100">
+                                    <div class="d-flex justify-content-center">
+                                        <h3 class="text-center text-light text-opacity-75 fw-bold">Web Development</h3>
+                                    </div>
+                                    <div class="d-flex justify-content-center text-light text-opacity-75">
+                                        <ul>
+                                            <li style="list-style: none;">
+                                                <p>&#10003; HTML</p>
+                                                <p>&#10003; CSS</p>
+                                                <p>&#10003; Bootstrap</p>
+                                                <p>&#10003; React JS</p>
+                                                <p>&#10003; PHP</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <div class="bg-secondary bg-opacity-75 border border-0 rounded-4 pt-4 ">
+                                    <div class="d-flex justify-content-center">
+                                        <h3 class="text-center text-light text-opacity-75 fw-bold">Other Programming Skills</h3>
+                                    </div>
+                                    <div class="d-flex justify-content-center text-light text-opacity-75">
+                                        <ul>
+                                            <li style="list-style: none;">
+                                                <p>&#10003; C Language</p>
+                                                <p>&#10003; C++</p>
+                                                <p>&#10003; git</p>
+                                                <p>&#10003; GitHub</p>
+                                                <p>&#10003; MongoDB</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+                <div class="section-3" id="projects">
+                    <div class="text-center text-light mt-5 pt-5">
+                        <h2 class="fw-bold text-opacity-75">Projects</h2>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-sm-6 mt-3">
+                            
+                            <div class="position-relative content-1">
+                                <img alt="gallery" class="d-block  w-100 h-100  rounded-4 "
+                                  src="./assets/pipeline1.jpg">
+                                <div
+                                  class="overlay bg-secondary ">
+                                    <a href="https://github.com/PARTHVATALIYA/CI-CD-pipeline-for-MERN-stack-application"><button
+                                        class="text-1 p-3 border border-3 border-dark text-dark bg-dark-subtle bg-opacity-75 rounded-4">Github</button></a>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-3">
+                            
+                            <div class="position-relative content-1">
+                                <img alt="gallery" class="d-block   w-100 h-100  rounded-4 "
+                                  src="./assets/tic-tac-toe.png">
+                                <div
+                                  class="overlay bg-secondary ">
+                                    <a href="https://github.com/PARTHVATALIYA/tic-tac-toe-using-cpp"><button
+                                        class="text-1 p-3 border border-3 border-dark text-dark bg-dark-subtle bg-opacity-75  rounded-4">Github</button></a>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-sm-6 mt-3">
+                            
+                            <div class="position-relative content-1">
+                                <img alt="gallery" class="d-block  w-100 h-100  rounded-4 "
+                                  src="./assets/Screenshot 2023-06-01 183320.png">
+                                <div
+                                  class="overlay bg-secondary ">
+                                    <a href="https://github.com/PARTHVATALIYA/responsive-website"><button
+                                        class="text-1 p-3 border border-3 border-dark text-dark bg-dark-subtle bg-opacity-75 rounded-4">Github</button></a>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-3">
+                            
+                            <div class="position-relative content-1">
+                                <img alt="gallery" class="d-block   w-100 h-100  rounded-4 "
+                                  src="./assets/Screenshot 2023-06-01 183411.png">
+                                <div
+                                  class="overlay bg-secondary ">
+                                    <a href="https://github.com/PARTHVATALIYA/Responsive-car-service-website-frontend"><button
+                                        class="text-1 p-3 border border-3 border-dark text-dark bg-dark-subtle bg-opacity-75 rounded-4">Github</button></a>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-sm-6 mt-3">
+                            
+                            <div class="position-relative content-1">
+                                <img alt="gallery" class="d-block  w-100 h-100  rounded-4 "
+                                  src="./assets/Screenshot 2023-06-01 180738.png">
+                                <div
+                                  class="overlay bg-secondary ">
+                                    <a href="https://github.com/PARTHVATALIYA/basic-calculator-using-react-js"><button
+                                        class="text-1 p-3 border border-3 border-dark text-dark bg-dark-subtle bg-opacity-75 rounded-4">Github</button></a>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-3">
+                            
+                            <div class="position-relative content-1">
+                                <img alt="gallery" class="d-block   w-100 h-100  rounded-4 "
+                                  src="./assets/AI-virtual-mouse.png">
+                                <div
+                                  class="overlay bg-secondary ">
+                                    <a href="https://github.com/PARTHVATALIYA/AI-virtul-mouse"><button
+                                        class="text-1 p-3 border border-3 border-dark text-dark bg-dark-subtle bg-opacity-75 rounded-4">Github</button></a>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-4" id="achievements">
+                    <div class="text-center text-light mt-5 pt-5">
+                        <h2 class="fw-bold text-opacity-75">Achievements</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="bg-secondary bg-opacity-75 border border-0 rounded-4 pb-1 height-1" >
+                                <div class="d-flex justify-content-center mt-4 pt-4">
+
+                                    <h4 class="text-light text-opacity-75 fw-semibold">University Results</h4>
+                                   
+                                </div>
+                                <div class="d-flex justify-content-center text-light text-opacity-75">
+
+                                    <ul>
+                                        <li style="list-style: none;">
+                                            <p>&#10095; All over CGPA: 8.79</p>
+                                            <p>&#10095; 5th Semester SGPA: 8.13</p>
+                                            <p>&#10095; 4th Semester SGPA: 8.44</p>
+                                            <p>&#10095; 3rd Semester SGPA: 9.36</p>
+                                            <p>&#10095; 2nd Semester SGPA: 9.89</p>
+                                            <p>&#10095; 1st Semester SGPA: 8.22</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-secondary bg-opacity-75 border border-0 rounded-4 pb-1" >
+                                <div class="d-flex justify-content-center mt-4 pt-4">
+
+                                    <h4 class="text-light text-opacity-75 fw-semibold">Other Achievements</h4>
+                                   
+                                </div>
+                                <div class="d-flex justify-content-center text-light text-opacity-75">
+
+                                    <ul>
+                                        <li style="list-style: none;">
+                                            <p>&#10095; Internship in NodeJs at <a href="https://www.weetechsolution.com/" class="text-light text-opacity-75 fw-bold" style="text-decoration: none;">WeeTech Solutions. </a></p>
+                                            <p>&#10095; Completed Introduction to SQL on SimpliLearn</p>
+                                            <p>&#10095; Completed HTML & CSS - certification course on Udemy</p>
+                                            <p>&#10095; 3rd Semester SGPA: 9.36</p>
+                                            <p>&#10095; I have solved 550+ code on leetcode.</p>
+                                            <p>&#10095; I have 100 days coding and Data structure I badge.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="section-5" id="contact">
+                <div class="bg-color-1">
+                    <div class="container">
+                        <div class="d-flex justify-content-center text-light mt-5 pt-5">
+                            <h2>Contact Me</h2>
+                        </div>
+                        <div class="row me-1">
+                            <div class="col-sm-6 pb-5 mt-5   ">
+                                <div class="d-flex justify-content-center flex-row mt-5">
+                                    <i class="fa fa-envelope"  style="font-size:48px; color: white;"></i>
+                                    <div class="flex-column">
+                                        <h4 class="text-light text-opacity-75 ms-3">Email</h4>
+                                        <a href="https://mail.google.com/mail/u/0/#inbox/FMfcgzGsmqxlpbnQxqJZgDPXCQgMGnGf?compose=CllgCJZdkVdCZQHQtncHNnHJJhMqLsrWrzGjBKVXLNFHKSnfzRjGblBgzXxdvKMkzZhvHcXFzPL" style="text-decoration: none;" class="text-light text-opacity-75 ms-3">vatliyaparth111@gmail.com</a>
+                                    </div>
+                                    
+                                </div>
+                               
+                            </div>
+                            <div class="col-sm-6 pb-5 mt-5">
+                                <div class="d-flex justify-content-center flex-row mt-5">
+                                    <i class="fa fa-phone"  style="font-size:48px; color: white;"></i>
+                                    <div class="flex-column">
+                                        <h4 class="text-light text-opacity-75 ms-3">Contact Number</h4>
+                                        <a href="tel: +918347642495" style="text-decoration: none;" class="text-light text-opacity-75 ms-3">+91 8347642495</a>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                                    
+                                   
+                                
+                        </div>
+                        <div class="d-flex justify-content-center pb-2">
+                            <a href="https://www.facebook.com/parth.vataliya.50/" class="m-2"><i class="fa fa-facebook" style="font-size: 20px; color: #bac1cc;"></i></a>
+                            <a href="https://www.linkedin.com/in/parth-vataliya-43111a21a/" class="m-2"><i class="fa fa-linkedin" style="font-size: 20px; color: #bac1cc;"></i></a>
+                            <a href="" class="m-2"><i class="fa fa-instagram" style="font-size: 20px; color: #bac1cc;"></i></a>
+                            <a href="https://github.com/PARTHVATALIYA" class="m-2"><i class="fa fa-github" style="font-size: 20px; color: #bac1cc;"></i></a>
+                            <a href="https://leetcode.com/ParthVatliya/" class="m-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#bac1cc" d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104a5.35 5.35 0 0 0-.125.513a5.527 5.527 0 0 0 .062 2.362a5.83 5.83 0 0 0 .349 1.017a5.938 5.938 0 0 0 1.271 1.818l4.277 4.193l.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019l-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523a2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382a1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382a1.38 1.38 0 0 0-1.38-1.382z"/></svg></a>
+                            
+                        </div>
+                        <div class="d-flex justify-content-center pb-5">
+                            <p class="text-light text-opacity-75" style="font-size: 9px;">	&#169; Parth Vataliya. All right reserved.</p>
+                        </div>
+                    </div>  
+                </div>
+                                  
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
